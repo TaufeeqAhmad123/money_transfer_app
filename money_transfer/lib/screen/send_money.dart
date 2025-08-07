@@ -5,6 +5,7 @@ import 'package:money_transfer/Core/utils/extansion.dart';
 import 'package:money_transfer/Core/utils/image.dart';
 import 'package:money_transfer/Core/utils/text_stl.dart';
 import 'package:money_transfer/provider/search_provider.dart';
+import 'package:money_transfer/screen/amount_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -80,6 +81,15 @@ class SendMoney extends StatelessWidget {
                         style: subtitleStyle(
                           context,
                         ).copyWith(color: Colors.white70, fontSize: 15.sp),
+                      ),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AmountScreen(
+                            user: user,
+                            userImage: userImg ?? atm,
+                          ),
+                        ),
                       ),
                     );
                   },
