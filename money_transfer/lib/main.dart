@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:money_transfer/provider/bottom_nav_bar.dart';
-import 'package:money_transfer/screen/home_screen.dart';
+import 'package:money_transfer/widget/bottom.nav_bar.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:provider/provider.dart';
 
@@ -19,11 +19,12 @@ class MyApp extends StatelessWidget {
         providers: [ChangeNotifierProvider(create: (_) => BottomBarProvider())],
         child: MaterialApp(
           title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: HomeScreen(),
+          home: BottomNavBar(),
         ),
       ),
     );

@@ -2,7 +2,7 @@
 
 const String homeIcon = 'asset/icons/home.svg';
 const String walletIcon = 'asset/icons/wallet.svg';
-const String settingIcon = 'asset/icons/settings.svg';
+const String settingIcon = 'asset/icons/setting.svg';
 const String profileIcon = 'asset/icons/profile.svg';
 
 // transctions_icons
@@ -22,3 +22,4 @@ const String appleIcon = 'asset/icons/apple.svg';
 
 const String searchIcon = 'asset/icons/search.svg';
 const String doodle = 'asset/icons/doodle.png';
+const String atm = 'asset/icons/atm.png';
