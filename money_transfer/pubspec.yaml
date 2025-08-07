@@ -39,6 +39,7 @@ dependencies:
   intl:
   google_fonts: ^6.2.0
   flutter_svg: 
+  flutter_animate: 
 
 
 dev_dependencies:
