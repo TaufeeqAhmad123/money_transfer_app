@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:money_transfer/provider/bottom_nav_bar.dart';
+import 'package:money_transfer/provider/search_provider.dart';
 import 'package:money_transfer/widget/bottom.nav_bar.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:provider/provider.dart';
@@ -16,7 +17,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveSizer(
       builder: (context, orientation, screenType) => MultiProvider(
-        providers: [ChangeNotifierProvider(create: (_) => BottomBarProvider())],
+        providers: [ChangeNotifierProvider(create: (_) => BottomBarProvider()),
+          ChangeNotifierProvider(create: (_) => SearchProvider())
+        
+        
+        
+        
+        ],
         child: MaterialApp(
           title: 'Flutter Demo',
           debugShowCheckedModeBanner: false,

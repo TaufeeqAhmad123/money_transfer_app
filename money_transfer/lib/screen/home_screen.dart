@@ -5,6 +5,7 @@ import 'package:money_transfer/Core/utils/color.dart';
 import 'package:money_transfer/Core/utils/extansion.dart';
 import 'package:money_transfer/Core/utils/image.dart';
 import 'package:money_transfer/Core/utils/text_stl.dart';
+import 'package:money_transfer/screen/send_money.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -163,18 +164,28 @@ class transactionWidget extends StatelessWidget {
         itemBuilder: (context, index) {
           return Column(
             children: [
-              Container(
-                height: 100,
-                width: 70,
-                decoration: BoxDecoration(
-                  color: const Color(0xff2d4147),
-
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                child: Center(
-                  child: SizedBox(
-                    height: 5.h,
-                    child: SvgPicture.asset(icon[index], color: Colors.white),
+              InkWell(
+                onTap: () {
+                  index==0 ? Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SendMoney(),
+                    ),
+                  ) : null; // Add navigation for other icons if needed 
+                },
+                child: Container(
+                  height: 100,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    color: const Color(0xff2d4147),
+                
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: Center(
+                    child: SizedBox(
+                      height: 5.h,
+                      child: SvgPicture.asset(icon[index], color: Colors.white),
+                    ),
                   ),
                 ),
               ),
