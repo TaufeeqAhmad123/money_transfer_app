@@ -17,12 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveSizer(
       builder: (context, orientation, screenType) => MultiProvider(
-        providers: [ChangeNotifierProvider(create: (_) => BottomBarProvider()),
-          ChangeNotifierProvider(create: (_) => SearchProvider())
-        
-        
-        
-        
+        providers: [
+          ChangeNotifierProvider(create: (_) => BottomBarProvider()),
+          ChangeNotifierProvider(create: (_) => SearchProvider()),
         ],
         child: MaterialApp(
           title: 'Flutter Demo',
